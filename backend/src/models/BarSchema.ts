@@ -61,6 +61,6 @@ const BarSchema = new Schema({
         required: false
     },
     late_night: { type: String, required: false }
-});
+}, { collection: 'bars' });
 
 export const BarModel = model('Bar', BarSchema)

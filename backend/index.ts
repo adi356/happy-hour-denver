@@ -26,6 +26,7 @@ app.get('/all-bars', getAllBarsController)
 //** Must provide CONNECTION_STRING in .env file */
 // Connect to MongoDB Cluster using mongoose
 mongoose.connect(process.env.CONNECTION_STRING!).then(() => {
+    console.log(`Connected to MongoDB database: ${mongoose.connection.db?.databaseName}`);
     app.listen(port, () => {
         console.log(`App listening on port ${port}`)
     })
