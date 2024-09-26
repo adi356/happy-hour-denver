@@ -14,7 +14,7 @@ export const getAllBarsController = async (req: Request, res: Response) => {
     // }
     try {
         const allBars = await BarModel.find({}); // Fetch all documents
-        console.log('Fetched Bars:', allBars);   // Log the result
+        //console.log('Fetched Bars:', allBars);   // Log the result
         res.json(allBars);
     } catch (err) {
         console.error('Error:', err);
